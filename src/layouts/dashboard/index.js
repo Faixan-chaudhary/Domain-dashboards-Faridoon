@@ -1,14 +1,14 @@
+import { MarginTwoTone } from "@mui/icons-material";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import { Box } from "@mui/material";
+import DataTable from "examples/Table";
+
 function Dashboard() {
-  
   return (
     <DashboardLayout>
       <DashboardNavbar />
-    <Box>Testing here</Box>
-      <Footer />
+
+      <DataTable />
     </DashboardLayout>
   );
 }
