@@ -1,8 +1,3 @@
-
-
-
-
-
 import chroma from "chroma-js";
 
 function hexToRgb(color) {

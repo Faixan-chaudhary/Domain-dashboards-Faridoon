@@ -25,7 +25,7 @@ import { ToastContainer } from "react-toastify";
 
 
 import BasicLayout from "layouts/authentication/components/BasicLayout";
-
+import { useNavigate } from "react-router-dom";
 
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 import { Typography } from "@mui/material";
@@ -33,6 +33,7 @@ import { toast } from "react-toastify";
 
 function Basic() {
   const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate();
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
@@ -40,6 +41,7 @@ function Basic() {
     toast.success("Login Successfully!", {
       style: { fontSize: "16px" } 
     });
+    navigate('/dashboard')
   }
   return (
     <BasicLayout image={bgImage}>
@@ -98,21 +100,7 @@ function Basic() {
                 sign in
               </MDButton>
             </MDBox>
-            <MDBox mt={3} mb={1} textAlign="center">
-              <MDTypography variant="button" color="text">
-                Don&apos;t have an account?{" "}
-                <MDTypography
-                  component={Link}
-                  to="/authentication/sign-up"
-                  variant="button"
-                  color="info"
-                  fontWeight="medium"
-                  textGradient
-                >
-                  Sign up
-                </MDTypography>
-              </MDTypography>
-            </MDBox>
+      
           </MDBox>
         </MDBox>
       </Card>

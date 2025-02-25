@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 
-import GitHubButton from "react-github-btn";
+// import GitHubButton from "react-github-btn";
 
 
 import Divider from "@mui/material/Divider";
@@ -125,7 +125,7 @@ function Configurator() {
         px={3}
       >
         <MDBox>
-          <MDTypography variant="h5">Display Settings</MDTypography>
+          <MDTypography variant="h5">Theme Settings</MDTypography>
           <MDTypography variant="body2" color="text">
             Please select the theme you want to use.
           </MDTypography>
