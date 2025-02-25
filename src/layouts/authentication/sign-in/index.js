@@ -1,34 +1,15 @@
-
-
 import { useState } from "react";
-
-
-import { Link } from "react-router-dom";
-
-
 import Card from "@mui/material/Card";
 import Switch from "@mui/material/Switch";
-import Grid from "@mui/material/Grid";
-import MuiLink from "@mui/material/Link";
 import Box from "@mui/material/Box";
-
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import GoogleIcon from "@mui/icons-material/Google";
-
-
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDInput from "components/MDInput";
 import MDButton from "components/MDButton";
 import { ToastContainer } from "react-toastify";
-
-
 import BasicLayout from "layouts/authentication/components/BasicLayout";
 import { useNavigate } from "react-router-dom";
-
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
-import { Typography } from "@mui/material";
 import { toast } from "react-toastify";
 
 function Basic() {
@@ -37,12 +18,12 @@ function Basic() {
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
-  const loginUser = () =>{
+  const loginUser = () => {
     toast.success("Login Successfully!", {
-      style: { fontSize: "16px" } 
+      style: { fontSize: "16px" },
     });
-    navigate('/dashboard')
-  }
+    navigate("/dashboard");
+  };
   return (
     <BasicLayout image={bgImage}>
       <Card>
@@ -96,11 +77,17 @@ function Basic() {
               </MDTypography>
             </MDBox>
             <MDBox mt={4} mb={1}>
-              <MDButton onClick={()=>{loginUser()}} variant="gradient" color="info" fullWidth>
+              <MDButton
+                onClick={() => {
+                  loginUser();
+                }}
+                variant="gradient"
+                color="info"
+                fullWidth
+              >
                 sign in
               </MDButton>
             </MDBox>
-      
           </MDBox>
         </MDBox>
       </Card>
