@@ -22,7 +22,7 @@ function Basic() {
     toast.success("Login Successfully!", {
       style: { fontSize: "16px" },
     });
-    navigate("/dashboard");
+    navigate("/ssl-certificate");
   };
   return (
     <BasicLayout image={bgImage}>

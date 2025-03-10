@@ -69,7 +69,9 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
   }, [dispatch, location]);
 
   
-  const renderRoutes = routes.map(({ type, name, icon, title, noCollapse, key, href, route }) => {
+  const renderRoutes = routes
+  .filter(({ name }) => name !== "Profile") // Exclude "Profile"
+  .map(({ type, name, icon, title, noCollapse, key, href, route }) => {
     let returnValue;
 
     if (type === "collapse") {
@@ -124,6 +126,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
 
     return returnValue;
   });
+
 
   return (
     <SidenavRoot

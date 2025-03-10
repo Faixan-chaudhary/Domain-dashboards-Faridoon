@@ -9,9 +9,9 @@ const routes = [
   {
     type: "collapse",
     name: "SSL Certificate",
-    key: "dashboard",
+    key: "SSL certificate",
     icon: <Icon fontSize="small">dashboard</Icon>,
-    route: "/dashboard",
+    route: "/ssl-certificate",
     component: <Dashboard />,
   },
 
@@ -23,7 +23,23 @@ const routes = [
     route: "/profile",
     component: <Profile />,
   },
+  {
+    type: "collapse",
+    name: "Domains",
+    key: "domains",
+    icon: <Icon fontSize="small">domains</Icon>,
+    route: "/domains",
+    component: <Dashboard />,
+  },
 
+  {
+    type: "collapse",
+    name: "Sign In",
+    key: "sign-in",
+    icon: <Icon fontSize="small">login</Icon>,
+    route: "/authentication/sign-in",
+    component: <SignIn />,
+  }
 
 ];
 
